@@ -1,14 +1,14 @@
 //
-//  A1Controller.swift
+//  LorenaController.swift
 //  FlashCards
 //
-//  Created by Quesada Muñoz on 05/05/16.
+//  Created by Borja Godoy Gago on 10/05/16.
 //  Copyright © 2016 ETSISI. All rights reserved.
 //
 
 import UIKit
 
-class A1Controller: UIViewController {
+class LorenaController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +32,24 @@ class A1Controller: UIViewController {
     }
     */
     
+    @IBOutlet var textField: UITextField!
+    @IBOutlet var label: UILabel!
+    
     let dato = NSUserDefaults()
-    var datoTema:String?
+    var datoTextField:String?
     
     @IBAction func guardar(sender: AnyObject) {
-        x
-        datoTema =let dato = NSUserDefaults()as String
-        dato.setObject(datoTema, forKey: "key")
+        datoTextField = textField.text! as String
+        dato.setObject(datoTextField, forKey: "key")
         dato.synchronize()
+    }
+    
+    @IBAction func ver(sender: AnyObject) {
+        label.text = dato.objectForKey("key") as? String
+    }
+    
+    func setObject(value: AnyObject?, forKey defaultName: String) {
+        dato.setObject(datoTextField, forKey: "key")
     }
 
 }

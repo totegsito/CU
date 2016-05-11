@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FlashCards/LorenaController.swift"
+            timestampString = "484591921.526608"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlashCards.LorenaController.__deallocating_deinit"
+                  moduleName = "FlashCards"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/borjagodoygago/Desktop/CU/FlashCards/LorenaController.swift"
+                  timestampString = "484591928.554702"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlashCards.LorenaController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; FlashCards.LorenaController"
+                  moduleName = "FlashCards"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/borjagodoygago/Desktop/CU/FlashCards/LorenaController.swift"
+                  timestampString = "484591928.556727"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FlashCards.LorenaController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;FlashCards.LorenaController&gt;"
+                  moduleName = "FlashCards"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/borjagodoygago/Desktop/CU/FlashCards/LorenaController.swift"
+                  timestampString = "484591928.556933"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
