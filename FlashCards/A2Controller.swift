@@ -41,7 +41,7 @@ class A2Controller: UIViewController {
         // Pass the selected object to the new view controller.
         
         if segue.destinationViewController.view != nil {
-            (segue.destinationViewController as! QuestionsController).actual = segue.identifier
+            (segue.destinationViewController as! QuestionsController).Level.text = segue.identifier
         }
         
         

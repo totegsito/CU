@@ -10,13 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var values = NSUserDefaults.standardUserDefaults()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        if NSUserDefaults.standardUserDefaults().objectForKey("Comida") != nil{
+        print("Igual no entro")
+        if (values.objectForKey("Comida") == nil){
+            print("Estoy insertando")
             loadUsersDefault()
-        }       
+            
+        }
+        print(values.objectForKey("Comida"))
         
     }
 
@@ -27,6 +32,8 @@ class ViewController: UIViewController {
     
     
     func loadUsersDefault(){
+        
+        
         
         var Comida = [[String:String]]()
         Comida.append(["word": "Wurst", "article": "die", "translation": "Salchicha"])
@@ -54,7 +61,7 @@ class ViewController: UIViewController {
         Comida.append(["word": "Gurke", "article": "die", "translation": "Pepino"])
         Comida.append(["word": "Fisch", "article": "der", "translation": "Pescado"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Comida, forKey: "Comida")
+        values.setValue(Comida, forKey: "Comida")
         
         
         
@@ -90,7 +97,7 @@ class ViewController: UIViewController {
         Lugares.append(["word": "Werkstatt", "article": "die", "translation": "Taller"])
         Lugares.append(["word": "Kaufhaus", "article": "das", "translation": "Almacén"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Lugares, forKey: "Lugares")
+        values.setValue(Lugares, forKey: "Lugares")
         
         
         
@@ -112,7 +119,7 @@ class ViewController: UIViewController {
         Transporte.append(["word": "Passagier", "article": "der", "translation": "Pasajero"])
         Transporte.append(["word": "Hubschrauber", "article": "der", "translation": "Helicoptero"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Transporte, forKey: "Transportes")
+        values.setValue(Transporte, forKey: "Transportes")
         
         
         
@@ -135,7 +142,7 @@ class ViewController: UIViewController {
         Tiempo.append(["word": "Sonne", "article": "die", "translation": "Sol"])
         Tiempo.append(["word": "Regen", "article": "der", "translation": "Lluvia"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Tiempo, forKey: "Tiempo")
+        values.setValue(Tiempo, forKey: "Tiempo")
         
         
         
@@ -155,7 +162,7 @@ class ViewController: UIViewController {
         Casa.append(["word": "Fenster", "article": "das", "translation": "Ventana"])
         Casa.append(["word": "Wand", "article": "die", "translation": "Pared"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Casa, forKey: "Casa")
+        values.setValue(Casa, forKey: "Casa")
         
         
         var Mobiliario = [[String:String]]()
@@ -177,7 +184,7 @@ class ViewController: UIViewController {
         Mobiliario.append(["word": "Spülmaschine", "article": "die", "translation": "Lavavajillas"])
         Mobiliario.append(["word": "Regal", "article": "das", "translation": "Estantería"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Mobiliario, forKey: "Mobiliario")
+        values.setValue(Mobiliario, forKey: "Mobiliario")
         
         
         
@@ -203,7 +210,7 @@ class ViewController: UIViewController {
         Ropa.append(["word": "Gürtel", "article": "der", "translation": "Cinturón"])
         Ropa.append(["word": "Bluse", "article": "die", "translation": "Blusa"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Ropa, forKey: "Ropa")
+        values.setValue(Ropa, forKey: "Ropa")
         
         
         
@@ -229,7 +236,7 @@ class ViewController: UIViewController {
         Cuerpo.append(["word": "Ohr", "article": "das", "translation": "Oreja"])
         Cuerpo.append(["word": "Gesicht", "article": "das", "translation": "Cara"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Cuerpo, forKey: "Cuerpo")
+        values.setValue(Cuerpo, forKey: "Cuerpo")
         
         
         
@@ -256,7 +263,7 @@ class ViewController: UIViewController {
         Vacaciones.append(["word": "Zimmerschlüssel", "article": "der", "translation": "Llave"])
         Vacaciones.append(["word": "Reisepass", "article": "der", "translation": "Pasaporte"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Vacaciones, forKey: "Vacaciones")
+        values.setValue(Vacaciones, forKey: "Vacaciones")
         
         
         
@@ -287,7 +294,7 @@ class ViewController: UIViewController {
         Colegio.append(["word": "Abitur", "article": "das", "translation": "Selectividad"])
         Colegio.append(["word": "Papier", "article": "das", "translation": "Papel"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Colegio, forKey: "Colegio")
+        values.setValue(Colegio, forKey: "Colegio")
         
         var Tecnologia = [[String:String]]()
         
@@ -314,7 +321,7 @@ class ViewController: UIViewController {
         Tecnologia.append(["word": "Fotoapparat", "article": "der", "translation": "Cámara de fotos"])
         Tecnologia.append(["word": "Kopfhörer", "article": "der", "translation": "Auricular"])
         Tecnologia.append(["word": "Sensor", "article": "der", "translation": "Sensor"])
-        NSUserDefaults.standardUserDefaults().setValue(Tecnologia  , forKey: "Tecnologia")
+        values.setValue(Tecnologia  , forKey: "Tecnologia")
 
         
         var Familia = [[String:String]]()
@@ -342,7 +349,7 @@ class ViewController: UIViewController {
         Familia.append(["word": "Cousin", "article": "der", "translation": "Primo"])
         Familia.append(["word": "Cousine", "article": "die", "translation": "Prima"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Familia, forKey: "Familia")
+        values.setValue(Familia, forKey: "Familia")
         
         var Materiales = [[String:String]]()
         Materiales.append(["word": "Holz", "article": "das", "translation": "Madera"])
@@ -365,7 +372,7 @@ class ViewController: UIViewController {
         Materiales.append(["word": "Wolle", "article": "die", "translation": "Lana"])
         Materiales.append(["word": "Sägemehl", "article": "das", "translation": "Serrín"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Materiales, forKey: "Materiales")
+        values.setValue(Materiales, forKey: "Materiales")
         
         
         
@@ -383,7 +390,7 @@ class ViewController: UIViewController {
         Geografia.append(["word": "Strand", "article": "der", "translation": "Playa"])
         Geografia.append(["word": "Pfad", "article": "der", "translation": "Camino"])
         
-        NSUserDefaults.standardUserDefaults().setValue(Geografia, forKey: "Geografia")
+        values.setValue(Geografia, forKey: "Geografia")
         
         
         var Deportes = [[String:String]]()
@@ -408,7 +415,7 @@ class ViewController: UIViewController {
         Deportes.append(["word": "Baseball", "article": "der", "translation": "Béisbol"])
         Deportes.append(["word": "Klettern", "article": "das", "translation": "Escalada"])
 
-        NSUserDefaults.standardUserDefaults().setValue(Deportes, forKey: "Deportes")
+        values.setValue(Deportes, forKey: "Deportes")
         
         
     }

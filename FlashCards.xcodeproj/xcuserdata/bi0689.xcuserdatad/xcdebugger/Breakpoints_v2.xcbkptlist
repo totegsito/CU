@@ -10,11 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlashCards/ViewController.swift"
-            timestampString = "484766925.625618"
+            timestampString = "484770913.332979"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "416"
-            endingLineNumber = "416">
+            startingLineNumber = "423"
+            endingLineNumber = "423"
+            landmarkName = "prepareForSegue(_:sender:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,13 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FlashCards/QuestionsController.swift"
-            timestampString = "484767711.310379"
+            timestampString = "484769248.501205"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "QuestionsController"
-            landmarkType = "3">
+            startingLineNumber = "8"
+            endingLineNumber = "8">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
