@@ -11,6 +11,8 @@ import UIKit
 class A1Controller: UIViewController {
     
     
+    @IBOutlet var TemaLB: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,7 +43,7 @@ class A1Controller: UIViewController {
         
         /*let vista:QuestionsController = segue.destinationViewController as! QuestionsController
         vista.Level.text = self.nombre*/
-        ;
+        
     }
 
 

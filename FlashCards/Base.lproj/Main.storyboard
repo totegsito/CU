@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jYg-hn-MOg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jYg-hn-MOg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
         <!--Inicial-->
@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="4ho-kT-aBu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eki-9N-NkJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJk-eI-Z9C">
-                                <rect key="frame" x="2" y="252" width="375" height="63"/>
+                                <rect key="frame" x="20" y="347" width="375" height="63"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Selecciona un nivel">
                                         <attributes>
@@ -30,37 +30,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRd-0i-fDS">
-                                <rect key="frame" x="49" y="405" width="280" height="70"/>
-                                <state key="normal" title="Nivel Básico 2" backgroundImage="rect5628">
+                                <rect key="frame" x="67" y="500" width="280" height="70"/>
+                                <state key="normal" title="Nivel A2" backgroundImage="rect5628">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="whV-xo-Had" kind="presentation" identifier="A2Segue" id="ZF7-5e-GL3"/>
+                                    <segue destination="whV-xo-Had" kind="presentation" identifier="A2" id="ZF7-5e-GL3"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono" translatesAutoresizingMaskIntoConstraints="NO" id="HTg-E9-r2K">
-                                <rect key="frame" x="69" y="71" width="240" height="164"/>
+                                <rect key="frame" x="87" y="166" width="240" height="164"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTP-5N-fjH">
-                                <rect key="frame" x="49" y="323" width="280" height="63"/>
+                                <rect key="frame" x="67" y="418" width="280" height="63"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Nivel Básico 1" backgroundImage="rect5628">
+                                <state key="normal" title="Nivel A1" backgroundImage="rect5628">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="A1Segue" id="137-3d-8Uz"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="A1" id="137-3d-8Uz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ib-DW-A8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.5" y="697.5"/>
+            <point key="canvasLocation" x="-50" y="725"/>
         </scene>
         <!--NivelA1-->
         <scene sceneID="tne-QT-ifu">
@@ -71,102 +71,95 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcp-Rt-oaR">
-                                <rect key="frame" x="20" y="285" width="100" height="100"/>
+                                <rect key="frame" x="40" y="282" width="100" height="100"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Casa" backgroundImage="casa">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="4Lx-gK-tSa"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Casa" id="4Lx-gK-tSa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWk-fw-O4U">
-                                <rect key="frame" x="137" y="155" width="100" height="100"/>
+                                <rect key="frame" x="157" y="152" width="100" height="100"/>
                                 <state key="normal" title="Lugares" backgroundImage="lugares">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="uxc-wp-oC8"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Lugares" id="uxc-wp-oC8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHA-Jc-WNN">
-                                <rect key="frame" x="20" y="155" width="100" height="100"/>
+                                <rect key="frame" x="40" y="152" width="100" height="100"/>
                                 <state key="normal" title="Comida" backgroundImage="comida">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="JEn-K1-1X0"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Comida" id="JEn-K1-1X0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMd-9S-o2g">
-                                <rect key="frame" x="255" y="155" width="100" height="100"/>
+                                <rect key="frame" x="275" y="152" width="100" height="100"/>
                                 <state key="normal" title="Mobiliario" backgroundImage="mobiliario">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="kRf-R8-8Kg"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Mobiliario" id="kRf-R8-8Kg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TR9-SC-D71">
-                                <rect key="frame" x="20" y="411" width="100" height="100"/>
+                                <rect key="frame" x="40" y="408" width="100" height="100"/>
                                 <state key="normal" title="Ropa" backgroundImage="ropa">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="KdH-TA-fSz"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Ropa" id="KdH-TA-fSz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaj-DR-uAK">
-                                <rect key="frame" x="137" y="411" width="100" height="100"/>
+                                <rect key="frame" x="157" y="408" width="100" height="100"/>
                                 <state key="normal" title="Cuerpo" backgroundImage="cuerpo">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="afo-7P-zPs"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Cuerpo" id="afo-7P-zPs"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tj-hj-PES">
-                                <rect key="frame" x="137" y="285" width="100" height="100"/>
+                                <rect key="frame" x="157" y="282" width="100" height="100"/>
                                 <state key="normal" title="Tiempo" backgroundImage="tiempo">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="idE-6B-oHB"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Tiempo" id="idE-6B-oHB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PP9-kg-73V">
-                                <rect key="frame" x="255" y="285" width="100" height="100"/>
+                                <rect key="frame" x="275" y="282" width="100" height="100"/>
                                 <state key="normal" title="Transportes" backgroundImage="transportes">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="77a-VG-mGK"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Transporte" id="77a-VG-mGK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bg-Ww-Y4U">
-                                <rect key="frame" x="255" y="411" width="100" height="100"/>
+                                <rect key="frame" x="275" y="408" width="100" height="100"/>
                                 <state key="normal" title="Vacaciones" backgroundImage="vacaciones">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="bVx-uH-Jie"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Vacaciones" id="bVx-uH-Jie"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsE-xc-FyV">
-                                <rect key="frame" x="0.0" y="70" width="375" height="51"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Nivel A1">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="35" name="ChalkboardSE-Light"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nivel A1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsE-xc-FyV">
+                                <rect key="frame" x="20" y="67" width="375" height="51"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="35"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-1" height="3"/>
@@ -175,7 +168,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="TemaLB" destination="hsE-xc-FyV" id="zkf-fM-rbX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,56 +260,6 @@
             </objects>
             <point key="canvasLocation" x="1192" y="639"/>
         </scene>
-        <!--Lorena Controller-->
-        <scene sceneID="43k-BW-Bux">
-            <objects>
-                <viewController id="cTl-LV-joc" customClass="LorenaController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="44T-sy-Ttd"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ie4-Ms-7Nt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="UkH-um-a8j">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juU-Be-ra1">
-                                <rect key="frame" x="178" y="222" width="56" height="30"/>
-                                <state key="normal" title="Guardar"/>
-                                <connections>
-                                    <action selector="guardar:" destination="cTl-LV-joc" eventType="touchUpInside" id="Itm-Og-qQC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W82-kz-2ir">
-                                <rect key="frame" x="191" y="270" width="30" height="30"/>
-                                <state key="normal" title="Ver"/>
-                                <connections>
-                                    <action selector="ver:" destination="cTl-LV-joc" eventType="touchUpInside" id="3bg-9c-wGQ"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="fcgh" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="14V-wE-IC5">
-                                <rect key="frame" x="158" y="113" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ym2-Mj-lfg">
-                                <rect key="frame" x="185" y="65" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="label" destination="Ym2-Mj-lfg" id="0R7-OR-uu2"/>
-                        <outlet property="textField" destination="14V-wE-IC5" id="aQY-Ka-HcW"/>
-                        <outlet property="view" destination="Ym2-Mj-lfg" id="9xs-4x-NT7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="py0-YA-NOQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1222" y="1424"/>
-        </scene>
         <!--NivelA2-->
         <scene sceneID="dFx-Gw-h3K">
             <objects>
@@ -323,20 +269,20 @@
                         <viewControllerLayoutGuide type="bottom" id="LSm-9n-Mko"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mCL-oV-LLg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzW-s1-JVb">
-                                <rect key="frame" x="70" y="155" width="100" height="100"/>
+                                <rect key="frame" x="89" y="152" width="100" height="100"/>
                                 <state key="normal" title="Colegio" backgroundImage="colegio">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="G6p-Qz-RnA"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Colegio" id="G6p-Qz-RnA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOF-RE-m3a">
-                                <rect key="frame" x="0.0" y="70" width="375" height="51"/>
+                                <rect key="frame" x="19" y="67" width="375" height="51"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Nivel A2">
                                         <attributes>
@@ -351,58 +297,61 @@
                                 <size key="shadowOffset" width="-1" height="3"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgo-X0-1r3">
-                                <rect key="frame" x="205" y="415" width="100" height="100"/>
+                                <rect key="frame" x="224" y="412" width="100" height="100"/>
                                 <state key="normal" title="Deportes" backgroundImage="deportes">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="lYl-Kf-K4l"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Deporte" id="lYl-Kf-K4l"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6U-E7-Ij3">
-                                <rect key="frame" x="70" y="285" width="100" height="100"/>
+                                <rect key="frame" x="89" y="282" width="100" height="100"/>
                                 <state key="normal" title="Familia" backgroundImage="familia">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="CX0-Cq-2R5"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Familia" id="CX0-Cq-2R5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGH-b0-gj8">
-                                <rect key="frame" x="70" y="415" width="100" height="100"/>
+                                <rect key="frame" x="89" y="412" width="100" height="100"/>
                                 <state key="normal" title="Geografía" backgroundImage="geografia">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="6BU-lA-nRb"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Geografia" id="6BU-lA-nRb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGK-kN-5cj">
-                                <rect key="frame" x="205" y="285" width="100" height="100"/>
+                                <rect key="frame" x="224" y="282" width="100" height="100"/>
                                 <state key="normal" title="Materiales" backgroundImage="materiales">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="gHq-5x-JoH"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Materiales" id="gHq-5x-JoH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIa-sy-Zvg">
-                                <rect key="frame" x="205" y="155" width="100" height="100"/>
+                                <rect key="frame" x="224" y="152" width="100" height="100"/>
                                 <state key="normal" title="Tecnología" backgroundImage="tecnologia">
                                     <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" id="gH7-5R-mfZ"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Tecnologia" id="gH7-5R-mfZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="TemaLB" destination="EOF-RE-m3a" id="mV1-BE-kZI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ID-CY-Bw8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="552.5" y="1101.5"/>
+            <point key="canvasLocation" x="552" y="1199"/>
         </scene>
     </scenes>
     <resources>

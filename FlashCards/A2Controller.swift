@@ -10,6 +10,10 @@ import UIKit
 
 class A2Controller: UIViewController {
 
+    
+    @IBOutlet weak var TemaLB: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +35,19 @@ class A2Controller: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.destinationViewController.view != nil {
+            (segue.destinationViewController as! QuestionsController).Level.text = segue.identifier
+        }
+        
+        
+        /*let vista:QuestionsController = segue.destinationViewController as! QuestionsController
+        vista.Level.text = self.nombre*/
+        
+    }
 
 }
