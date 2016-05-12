@@ -17,9 +17,17 @@ class QuestionsController: UIViewController {
     @IBOutlet weak var TranslationLB: UILabel!
     
     
+    var actual:String!
+    
+    var valores:AnyObject!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Level.text = actual
+        valores = NSUserDefaults.standardUserDefaults().objectForKey(actual)
+        WordLB.text = valores[0]["word"]!
 
         // Do any additional setup after loading the view.
     }
