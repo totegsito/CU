@@ -9,7 +9,8 @@
 import UIKit
 
 class A1Controller: UIViewController {
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,21 +26,23 @@ class A1Controller: UIViewController {
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little /preparation before navigation
+    
+    
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+            if segue.destinationViewController.view != nil {
+                (segue.destinationViewController as! QuestionsController).Level.text = segue.identifier
+        }
+
+        
+        /*let vista:QuestionsController = segue.destinationViewController as! QuestionsController
+        vista.Level.text = self.nombre*/
+        ;
     }
-    */
-    
-    let dato = NSUserDefaults()
-    var datoTema:String?
-    
-    @IBAction func guardar(sender: AnyObject) {
-        x
-        datoTema =let dato = NSUserDefaults()as String
-        dato.setObject(datoTema, forKey: "key")
-        dato.synchronize()
-    }
+
 
 }

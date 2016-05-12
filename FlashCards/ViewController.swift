@@ -19,7 +19,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+   
+    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "A1Segue"{
             if segue.destinationViewController.view != nil {
                 //(segue.destinationViewController as! A1Controller).texto.text = "primero"
@@ -29,7 +30,7 @@ class ViewController: UIViewController {
             
         }
         
-    }
+    }*/
 
 
 }
