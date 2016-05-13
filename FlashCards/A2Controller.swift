@@ -36,6 +36,11 @@ class A2Controller: UIViewController {
     }
     */
     
+    
+    @IBAction func volver(){
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

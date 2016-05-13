@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print (values.objectForKey("Transporte"))
         print("Igual no entro")
         if (values.objectForKey("Comida") == nil){
             print("Estoy insertando")
@@ -119,7 +121,7 @@ class ViewController: UIViewController {
         Transporte.append(["word": "Passagier", "article": "der", "translation": "Pasajero"])
         Transporte.append(["word": "Hubschrauber", "article": "der", "translation": "Helicoptero"])
         
-        values.setValue(Transporte, forKey: "Transportes")
+        values.setValue(Transporte, forKey: "Transporte")
         
         
         

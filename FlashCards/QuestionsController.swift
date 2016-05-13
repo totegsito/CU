@@ -18,19 +18,40 @@ class QuestionsController: UIViewController {
     
     
     var actual: String!
-    
+    var cont:Int!
+    var respuestas = [Bool]()
+    var values = [[String:String]]()
 
+    @IBOutlet weak var StartButton: UIButton!
+    
+    @IBAction func Empezar(){
+        WordLB.alpha = 1
+        TranslationLB.alpha = 1
+        actual = Level.text
+        StartButton.alpha = 0
+        values = NSUserDefaults.standardUserDefaults().objectForKey(actual) as! [[String:String]]
+        WordLB.text = values[cont]["word"]!
+        TranslationLB.text = values[cont]["translation"]!
+        print (values)
+        
+    }
+    
+    @IBAction func Volver(){
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func nextQuestion(){
+        
+    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        actual = Level.text
-        //let valores = NSUserDefaults.standardUserDefaults().objectForKey(actual)
-        print(actual)
-        print(NSUserDefaults.standardUserDefaults().objectForKey(actual))
-
-        // Do any additional setup after loading the view.
+        WordLB.alpha = 0
+        TranslationLB.alpha = 0
+        cont = 0
+        
     }
 
     override func didReceiveMemoryWarning() {
