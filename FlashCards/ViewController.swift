@@ -16,10 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print (values.objectForKey("Transporte"))
-        print("Igual no entro")
         if (values.objectForKey("Comida") == nil){
-            print("Estoy insertando")
             loadUsersDefault()
             
         }
@@ -35,9 +32,9 @@ class ViewController: UIViewController {
     
     func loadUsersDefault(){
         
-        
-        
         var Comida = [[String:String]]()
+        
+        
         Comida.append(["word": "Wurst", "article": "die", "translation": "Salchicha"])
         Comida.append(["word": "Frühstück", "article": "das", "translation": "Desayuno"])
         Comida.append(["word": "Butter", "article": "die", "translation": "Mantequilla"])

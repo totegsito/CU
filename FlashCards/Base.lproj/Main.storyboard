@@ -235,13 +235,6 @@
                                 <color key="shadowColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="-1" height="3"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-1s-iMD">
-                                <rect key="frame" x="20" y="599" width="120" height="60"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="der" backgroundImage="der">
-                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqz-SU-npf">
                                 <rect key="frame" x="147" y="599" width="120" height="60"/>
                                 <state key="normal" title="die" backgroundImage="die">
@@ -277,23 +270,30 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="y9C-8B-hLa" appends="YES" id="kFD-by-Q4H"/>
-                                </connections>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UjW-Dh-lo0">
                                 <rect key="frame" x="147" y="514" width="120" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Empezar"/>
                                 <connections>
-                                    <action selector="Empezar" destination="2dh-UK-bmJ" eventType="touchUpInside" id="ppw-Mk-Bn9"/>
+                                    <action selector="Start" destination="2dh-UK-bmJ" eventType="touchUpInside" id="pWS-T6-TAh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rih-Mh-9M5">
-                                <rect key="frame" x="24" y="667" width="83" height="49"/>
+                                <rect key="frame" x="20" y="679" width="83" height="49"/>
                                 <state key="normal" title="Cancelar"/>
                                 <connections>
-                                    <action selector="Volver" destination="2dh-UK-bmJ" eventType="touchUpInside" id="uWk-DL-knx"/>
+                                    <action selector="Back" destination="2dh-UK-bmJ" eventType="touchUpInside" id="Eaw-cz-EMg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-1s-iMD">
+                                <rect key="frame" x="19" y="599" width="120" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="der" backgroundImage="der">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Der" destination="2dh-UK-bmJ" eventType="touchUpInside" id="3ED-t4-aYm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -302,6 +302,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="Card" destination="zIr-mn-P6x" id="DCz-Ah-SaV"/>
                         <outlet property="Level" destination="IEc-cW-0ip" id="nbm-fB-HHQ"/>
                         <outlet property="StartButton" destination="UjW-Dh-lo0" id="9xr-zQ-buo"/>
                         <outlet property="TranslationLB" destination="QfY-VK-wMU" id="j3N-i1-hhD"/>
@@ -309,8 +310,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hsL-Pe-l2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="Ahl-Y9-8NV"/>
-                <swipeGestureRecognizer direction="right" id="y9C-8B-hLa"/>
             </objects>
             <point key="canvasLocation" x="1192" y="639"/>
         </scene>

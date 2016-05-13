@@ -19,29 +19,49 @@ class QuestionsController: UIViewController {
     
     var actual: String!
     var cont:Int!
-    var respuestas = [Bool]()
+    var respuestas = [String]()
     var values = [[String:String]]()
 
     @IBOutlet weak var StartButton: UIButton!
     
-    @IBAction func Empezar(){
+    @IBOutlet weak var Card: UIView!
+    
+    
+    @IBAction func Start(){
         WordLB.alpha = 1
         TranslationLB.alpha = 1
         actual = Level.text
         StartButton.alpha = 0
         values = NSUserDefaults.standardUserDefaults().objectForKey(actual) as! [[String:String]]
-        WordLB.text = values[cont]["word"]!
-        TranslationLB.text = values[cont]["translation"]!
-        print (values)
+        refreshCard("")
         
     }
     
-    @IBAction func Volver(){
+    @IBAction func Back(){
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func Der(){
+        refreshCard("der ")
+    }
+    
     func nextQuestion(){
-        
+        if(cont < (values.count-1)){
+            cont = cont + 1
+            refreshCard("")
+        }
+    }
+    
+    func previousQuestion(){
+        if(cont > 0){
+            cont = cont - 1
+            refreshCard("")
+        }
+    }
+    
+    func refreshCard(article:String){
+        WordLB.text = article + values[cont]["word"]!
+        TranslationLB.text = values[cont]["translation"]!
     }
     
     
@@ -52,11 +72,29 @@ class QuestionsController: UIViewController {
         TranslationLB.alpha = 0
         cont = 0
         
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        
+        leftSwipe.direction = .Left
+        rightSwipe.direction = .Right
+        view.addGestureRecognizer(leftSwipe)
+        view.addGestureRecognizer(rightSwipe)
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func handleSwipes(sender: UISwipeGestureRecognizer){
+        if(sender.direction == .Left){
+            nextQuestion()
+        }
+        else
+        if(sender.direction == .Right){
+            previousQuestion()
+        }
     }
     
 
