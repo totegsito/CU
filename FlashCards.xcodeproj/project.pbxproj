@@ -15,6 +15,7 @@
 		0836037F1CDB865500414D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0836037D1CDB865500414D0A /* Main.storyboard */; };
 		083603811CDB865500414D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 083603801CDB865500414D0A /* Assets.xcassets */; };
 		083603841CDB865500414D0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 083603821CDB865500414D0A /* LaunchScreen.storyboard */; };
+		3AD586381CE8979C001F0F11 /* ResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD586371CE8979B001F0F11 /* ResultsController.swift */; };
 		FED827481CE2424C005BADF6 /* LorenaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED827471CE2424C005BADF6 /* LorenaController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		083603801CDB865500414D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		083603831CDB865500414D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		083603851CDB865500414D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AD586371CE8979B001F0F11 /* ResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsController.swift; sourceTree = "<group>"; };
 		FED827471CE2424C005BADF6 /* LorenaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LorenaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				081CD20D1CDBBBEF00E1E483 /* A2Controller.swift */,
 				081CD20F1CDBBC0900E1E483 /* QuestionsController.swift */,
 				FED827471CE2424C005BADF6 /* LorenaController.swift */,
+				3AD586371CE8979B001F0F11 /* ResultsController.swift */,
 			);
 			path = FlashCards;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				0836037A1CDB865500414D0A /* AppDelegate.swift in Sources */,
 				081CD20C1CDBBBA100E1E483 /* A1Controller.swift in Sources */,
 				081CD2101CDBBC0900E1E483 /* QuestionsController.swift in Sources */,
+				3AD586381CE8979C001F0F11 /* ResultsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

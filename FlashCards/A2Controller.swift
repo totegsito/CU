@@ -18,6 +18,13 @@ class A2Controller: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
+        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        
+        rightSwipe.direction = .Right
+        view.addGestureRecognizer(rightSwipe)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +43,12 @@ class A2Controller: UIViewController {
     }
     */
     
+    func handleSwipes(sender: UISwipeGestureRecognizer){
+        
+        if(sender.direction == .Right){
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+    }
     
     @IBAction func volver(){
         dismissViewControllerAnimated(true, completion: nil)

@@ -20,7 +20,6 @@ class ViewController: UIViewController {
             loadUsersDefault()
             
         }
-        print(values.objectForKey("Comida"))
         
     }
 
