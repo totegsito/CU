@@ -16,17 +16,30 @@ class QuestionsController: UIViewController {
     @IBOutlet weak var WordLB: UILabel!
     @IBOutlet weak var TranslationLB: UILabel!
     @IBOutlet weak var answersLB: UILabel!
+    @IBOutlet weak var Hint: UILabel!
+    @IBOutlet weak var counterLB: UILabel!
     @IBOutlet weak var Finish: UIButton!
     
     @IBOutlet weak var derButton: UIButton!
     @IBOutlet weak var dieButton: UIButton!
     @IBOutlet weak var dasButton: UIButton!
     
+    // Palabra actual en la que nos encontramos
     var actual: String!
+    // Posiciónn en la que nos encontramos
     var cont:Int!
+    
+    // Respuestas que el usuario ha dado
     var answers = [String]()
+    // Palabras, traducciones y articulos para el tema actual
     var values = [[String:String]]()
+    //Variable para controlar si se ha respondido a todo
     var end:Bool = false
+    
+    
+    // Variables encargadas de llevar el tiempo
+    var timer = NSTimer()
+    var count:Int = 0
 
     @IBOutlet weak var StartButton: UIButton!
     
@@ -35,12 +48,13 @@ class QuestionsController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         WordLB.alpha = 0
+        Hint.alpha = 0
         TranslationLB.alpha = 0
         derButton.alpha = 0
         dieButton.alpha = 0
         dasButton.alpha = 0
         answersLB.alpha = 0
-        Finish.alpha = 0
+        //Finish.alpha = 0
         cont = 0
         
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
@@ -62,15 +76,22 @@ class QuestionsController: UIViewController {
     //Inicializamos todo aquí ya que viewDidLoad se ejecuta antes del paso de mensajes de prepareForSegue
     @IBAction func Start(){
         
-        StartButton.alpha = 0
-        WordLB.alpha = 1
-        TranslationLB.alpha = 1
-        answersLB.alpha = 1
-        actual = Level.text
         
-        derButton.alpha = 1
-        dieButton.alpha = 1
-        dasButton.alpha = 1
+        self.StartButton.alpha = 0
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.WordLB.alpha = 1
+            self.TranslationLB.alpha = 1
+            self.answersLB.alpha = 1
+            self.Hint.alpha = 1
+            self.actual = self.Level.text
+            
+            self.derButton.alpha = 1
+            self.dieButton.alpha = 1
+            self.dasButton.alpha = 1
+            }, completion: nil)
+        
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("counter"), userInfo: nil, repeats: true)
+
         
         
         values = NSUserDefaults.standardUserDefaults().objectForKey(actual) as! [[String:String]]
@@ -128,6 +149,11 @@ class QuestionsController: UIViewController {
             cont = cont + 1
             refreshCard()
         }
+        UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+            self.Hint.alpha = 0
+            }, completion: nil)
+
+        //Hint.alpha = 0
     }
     
     func previousQuestion(){
@@ -152,7 +178,7 @@ class QuestionsController: UIViewController {
                 }
                 self.TranslationLB.text = self.values[self.cont]["translation"]!
                 // Fade in
-                UIView.animateWithDuration(0.5, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                UIView.animateWithDuration(0.1, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
                     self.WordLB.alpha = 1.0
                     self.TranslationLB.alpha = 1.0
                     }, completion: nil)
@@ -169,6 +195,11 @@ class QuestionsController: UIViewController {
         }
         end = answered==answers.count
         return String(answered)
+    }
+    
+    func counter() {
+        count += 1
+        counterLB.text = "\(count)"
     }
     
     func handleSwipes(sender: UISwipeGestureRecognizer){
@@ -200,11 +231,26 @@ class QuestionsController: UIViewController {
         // Pass the selected object to the new view controller.
         
         if segue.destinationViewController.view != nil {
-            let answers : [String] = ["¡Enhorabuena!", "Sigue practicando"]
             let numberOfRights: Int = evaluar()
+            var aux:String?
             let destination = (segue.destinationViewController as! ResultsController)
             destination.ResultadoLB.text = String(numberOfRights) + "/"+String(values.count)
-            destination.FraseLb.text = numberOfRights > (values.count/2) ? answers[0] : answers[1]
+            timer.invalidate()
+            if(numberOfRights<values.count/2){
+                aux = "Sigue practicando, puedes mejorar"
+            }
+            else if(numberOfRights>3*(values.count/4)){
+                aux = "¡Enhorabuena!, se te da muy bien"
+            }
+            else{
+             aux = "Vaya, eres una máquina"
+            }
+            if((count/60)==0){
+             destination.TimeLB.text = "Has tardado " + String(count) + " segundos"
+            }else{
+                destination.TimeLB.text = "Has tardado " + String(count/60) + " m " + String(count%60) + " s"
+            }
+            destination.FraseLb.text = aux
             destination.TemaLB.text = Level.text
             
         }
@@ -214,6 +260,8 @@ class QuestionsController: UIViewController {
          vista.Level.text = self.nombre*/
         
     }
+    
+    
     
 
 

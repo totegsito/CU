@@ -14,6 +14,7 @@ class ResultsController: UIViewController {
     @IBOutlet weak var TemaLB: UILabel!
     @IBOutlet weak var ResultadoLB: UILabel!
     @IBOutlet weak var FraseLb: UILabel!
+    @IBOutlet weak var TimeLB: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,7 @@ class ResultsController: UIViewController {
     
     
     @IBAction func Back(){
-        dismissViewControllerAnimated(true, completion: nil)
+        //dismissViewControllerAnimated(true, completion: nil)
+        presentingViewController?.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
     }
 }
