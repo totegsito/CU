@@ -44,6 +44,7 @@ class QuestionsController: UIViewController {
     @IBOutlet weak var StartButton: UIButton!
     
     @IBOutlet weak var Card: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -236,6 +237,7 @@ class QuestionsController: UIViewController {
             let destination = (segue.destinationViewController as! ResultsController)
             destination.ResultadoLB.text = String(numberOfRights) + "/"+String(values.count)
             timer.invalidate()
+        
             if(numberOfRights<values.count/2){
                 aux = "Sigue practicando, puedes mejorar"
             }
