@@ -18,8 +18,8 @@ class ResultsController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBOutlet var tableView: UITableView!
     
-    
-    var swiftBlogs = ["Ray Wenderlich", "NSHipster", "iOS Developer Tips", "Jameson Quave", "Natasha The Robot", "Coding Explorer", "That Thing In Swift", "Andrew Bancroft", "iAchieved.it", "Airspeed Velocity"]
+    var values = [[String:String]]()
+    var answers = [String]()
     let textCellIdentifier = "TextCell"
     
     
@@ -36,14 +36,15 @@ class ResultsController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return swiftBlogs.count
+        return answers.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
         
         let row = indexPath.row
-        cell.textLabel?.text = swiftBlogs[row]
+        cell.textLabel?.text = answers[row] + " " + values[row]["word"]!
+        cell.textLabel?.textColor = answers[row] == values[row]["article"] ? UIColor.greenColor() : UIColor.redColor()
         
         return cell
     }
@@ -53,7 +54,7 @@ class ResultsController: UIViewController, UITableViewDataSource, UITableViewDel
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
         let row = indexPath.row
-        print(swiftBlogs[row])
+        print(answers[row])
     }
     
     @IBAction func Back(){

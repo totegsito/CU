@@ -19,29 +19,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJk-eI-Z9C">
-                                <rect key="frame" x="19" y="273" width="375" height="63"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="V9t-ZU-SfL"/>
-                                </constraints>
-                                <attributedString key="attributedText">
-                                    <fragment content="Selecciona un nivel">
-                                        <attributes>
-                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="23" name="ChalkboardSE-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icono" translatesAutoresizingMaskIntoConstraints="NO" id="HTg-E9-r2K">
                                 <rect key="frame" x="87" y="84" width="240" height="164"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRd-0i-fDS">
-                                <rect key="frame" x="67" y="426" width="280" height="70"/>
+                                <rect key="frame" x="67" y="426" width="280" height="63"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="amg-JH-w67"/>
+                                    <constraint firstAttribute="height" constant="63" id="sas-p3-RPh"/>
                                 </constraints>
                                 <state key="normal" title="Nivel A2" backgroundImage="rect5628">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -53,7 +37,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTP-5N-fjH">
                                 <rect key="frame" x="67" y="344" width="280" height="63"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="63" id="vaF-6D-JUg"/>
+                                    <constraint firstAttribute="height" constant="63" id="kK3-TJ-VMr"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Nivel A1" backgroundImage="rect5628">
@@ -64,23 +48,30 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="A1" id="137-3d-8Uz"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbS-du-cbK">
+                                <rect key="frame" x="67" y="510" width="280" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="xpW-3A-A8e"/>
+                                </constraints>
+                                <state key="normal" title="Repaso" backgroundImage="rect5628"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="jJk-eI-Z9C" firstAttribute="trailing" secondItem="eki-9N-NkJ" secondAttribute="trailingMargin" id="05U-k1-O5N"/>
-                            <constraint firstItem="jJk-eI-Z9C" firstAttribute="top" secondItem="HTg-E9-r2K" secondAttribute="bottom" constant="25" id="38f-Rg-OQb"/>
-                            <constraint firstItem="HTg-E9-r2K" firstAttribute="centerX" secondItem="eki-9N-NkJ" secondAttribute="centerX" id="61m-14-2ix"/>
-                            <constraint firstItem="TTP-5N-fjH" firstAttribute="leading" secondItem="RRd-0i-fDS" secondAttribute="leading" id="A7E-X6-oph"/>
-                            <constraint firstItem="TTP-5N-fjH" firstAttribute="leading" secondItem="eki-9N-NkJ" secondAttribute="leadingMargin" constant="47" id="BYs-S8-iGf"/>
-                            <constraint firstItem="jJk-eI-Z9C" firstAttribute="centerX" secondItem="TTP-5N-fjH" secondAttribute="centerX" id="OSf-wo-ZJN"/>
-                            <constraint firstItem="RRd-0i-fDS" firstAttribute="top" secondItem="TTP-5N-fjH" secondAttribute="bottom" constant="19" id="RQY-Y2-2QE"/>
-                            <constraint firstItem="HTg-E9-r2K" firstAttribute="leading" secondItem="eki-9N-NkJ" secondAttribute="leadingMargin" constant="67" id="Ta0-Xp-dQb"/>
-                            <constraint firstItem="TTP-5N-fjH" firstAttribute="trailing" secondItem="RRd-0i-fDS" secondAttribute="trailing" id="XZX-7W-KNI"/>
-                            <constraint firstItem="HTg-E9-r2K" firstAttribute="centerX" secondItem="jJk-eI-Z9C" secondAttribute="centerX" id="XiG-oH-Kqo"/>
-                            <constraint firstItem="TTP-5N-fjH" firstAttribute="top" secondItem="jJk-eI-Z9C" secondAttribute="bottom" constant="8" symbolic="YES" id="cBQ-5l-ROS"/>
-                            <constraint firstItem="4ho-kT-aBu" firstAttribute="top" secondItem="RRd-0i-fDS" secondAttribute="bottom" constant="240" id="p3D-EW-mIg"/>
-                            <constraint firstItem="HTg-E9-r2K" firstAttribute="top" secondItem="aZI-2B-fkJ" secondAttribute="bottom" constant="64" id="zwo-8F-KPw"/>
+                            <constraint firstItem="RRd-0i-fDS" firstAttribute="top" secondItem="TTP-5N-fjH" secondAttribute="bottom" constant="19" id="1xt-TK-ud6"/>
+                            <constraint firstItem="RRd-0i-fDS" firstAttribute="trailing" secondItem="tbS-du-cbK" secondAttribute="trailing" id="7fG-xF-YSA"/>
+                            <constraint firstItem="4ho-kT-aBu" firstAttribute="top" secondItem="tbS-du-cbK" secondAttribute="bottom" constant="163" id="Emx-h5-Nk4"/>
+                            <constraint firstItem="RRd-0i-fDS" firstAttribute="leading" secondItem="TTP-5N-fjH" secondAttribute="leading" id="LAH-vj-OZ6"/>
+                            <constraint firstItem="TTP-5N-fjH" firstAttribute="trailing" secondItem="RRd-0i-fDS" secondAttribute="trailing" id="Lun-9P-yHl"/>
+                            <constraint firstItem="HTg-E9-r2K" firstAttribute="leading" secondItem="eki-9N-NkJ" secondAttribute="leadingMargin" constant="67" id="Sq6-oD-dmN"/>
+                            <constraint firstItem="TTP-5N-fjH" firstAttribute="leading" secondItem="eki-9N-NkJ" secondAttribute="leadingMargin" constant="47" id="YiI-s7-jTJ"/>
+                            <constraint firstItem="TTP-5N-fjH" firstAttribute="top" secondItem="HTg-E9-r2K" secondAttribute="bottom" constant="96" id="ZpU-Nb-y5B"/>
+                            <constraint firstItem="HTg-E9-r2K" firstAttribute="centerX" secondItem="eki-9N-NkJ" secondAttribute="centerX" id="aHJ-bQ-maR"/>
+                            <constraint firstItem="tbS-du-cbK" firstAttribute="top" secondItem="RRd-0i-fDS" secondAttribute="bottom" constant="21" id="u87-aj-KpQ"/>
+                            <constraint firstItem="HTg-E9-r2K" firstAttribute="top" secondItem="aZI-2B-fkJ" secondAttribute="bottom" constant="64" id="uLA-Uo-LWd"/>
+                            <constraint firstItem="tbS-du-cbK" firstAttribute="leading" secondItem="RRd-0i-fDS" secondAttribute="leading" id="wWY-h4-JcZ"/>
+                            <constraint firstItem="HTg-E9-r2K" firstAttribute="centerX" secondItem="TTP-5N-fjH" secondAttribute="centerX" id="xlQ-dm-sHm"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -465,7 +456,7 @@
                                 <rect key="frame" x="20" y="508" width="374" height="156"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="8ak-mP-54K" style="IBUITableViewCellStyleDefault" id="P8e-J2-CLL">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextCell" textLabel="8ak-mP-54K" style="IBUITableViewCellStyleDefault" id="P8e-J2-CLL">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="P8e-J2-CLL" id="aAR-Ov-CHy">

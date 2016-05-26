@@ -63,6 +63,7 @@ class ViewController: UIViewController {
         
         
         
+        
         var Lugares = [[String:String]]()
         
         Lugares.append(["word": "Teather", "article": "das", "translation": "Teatro"])

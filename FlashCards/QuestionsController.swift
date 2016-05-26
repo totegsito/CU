@@ -55,7 +55,7 @@ class QuestionsController: UIViewController {
         dieButton.alpha = 0
         dasButton.alpha = 0
         answersLB.alpha = 0
-        //Finish.alpha = 0
+        Finish.alpha = 0
         cont = 0
         
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
@@ -237,6 +237,9 @@ class QuestionsController: UIViewController {
             let destination = (segue.destinationViewController as! ResultsController)
             destination.ResultadoLB.text = String(numberOfRights) + "/"+String(values.count)
             timer.invalidate()
+            
+            destination.values = values
+            destination.answers = answers
         
             if(numberOfRights<values.count/2){
                 aux = "Sigue practicando, puedes mejorar"
