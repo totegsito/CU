@@ -55,6 +55,7 @@ class QuestionsController: UIViewController {
         dieButton.alpha = 0
         dasButton.alpha = 0
         answersLB.alpha = 0
+        counterLB.alpha = 0
         Finish.alpha = 0
         cont = 0
         
@@ -84,6 +85,7 @@ class QuestionsController: UIViewController {
             self.TranslationLB.alpha = 1
             self.answersLB.alpha = 1
             self.Hint.alpha = 1
+            self.counterLB.alpha = 1
             self.actual = self.Level.text
             
             self.derButton.alpha = 1
@@ -227,6 +229,26 @@ class QuestionsController: UIViewController {
         return numberOfRights
     }
     
+    func saveResults(){
+        let userScores = NSUserDefaults.standardUserDefaults()
+        /*if( userScores.objectForKey("Scores") != nil){
+            userScores.objectForKey("Scores")[actual]?.append((Float(evaluar()*10) / Float(values.count)))
+        }else{
+        }*/
+        //userScores.setObject([String : [Float]](), forKey: "Scores")
+
+        var scores = userScores.objectForKey("Scores") as! [String : [Float]]
+        if((scores[actual]) != nil){
+            scores[actual]?.append(Float(evaluar()*10)/Float(values.count))
+        }else{
+            scores[actual] = [Float]()
+            scores[actual]?.append(Float(evaluar()*10)/Float(values.count))
+        }
+        userScores.setObject(scores, forKey: "Scores")
+        print(scores)
+        
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -257,12 +279,9 @@ class QuestionsController: UIViewController {
             }
             destination.FraseLb.text = aux
             destination.TemaLB.text = Level.text
+            saveResults()
             
         }
-        
-        
-        /*let vista:QuestionsController = segue.destinationViewController as! QuestionsController
-         vista.Level.text = self.nombre*/
         
     }
     

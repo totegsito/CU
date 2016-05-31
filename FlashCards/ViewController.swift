@@ -15,7 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        if( values.objectForKey("Scores") == nil){
+            values.setObject([String : [Float]](), forKey: "Scores")
+        }
         if (values.objectForKey("Comida") == nil){
             loadUsersDefault()
             
