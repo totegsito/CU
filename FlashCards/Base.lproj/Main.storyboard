@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jYg-hn-MOg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10109" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jYg-hn-MOg">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10083"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -56,7 +56,7 @@
                                 <rect key="frame" x="67" y="515" width="280" height="81"/>
                                 <state key="normal" title="Mis tarjetas" backgroundImage="rect5628"/>
                                 <connections>
-                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="Custom" id="4dT-EN-rGo"/>
+                                    <segue destination="2dh-UK-bmJ" kind="presentation" identifier="MisTarjetas" id="4dT-EN-rGo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRd-0i-fDS">
@@ -100,6 +100,9 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="MyCards" destination="L32-5b-wCe" id="c3u-NB-PIB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ib-DW-A8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -535,7 +538,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgc-fj-9FK">
                                 <rect key="frame" x="216" y="634" width="65" height="30"/>
-                                <state key="normal" title="Aceptar"/>
+                                <state key="normal" title="Añadir"/>
                                 <connections>
                                     <action selector="aceptar" destination="NaI-84-nlL" eventType="touchUpInside" id="agN-3L-jKn"/>
                                 </connections>
@@ -597,11 +600,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3s-4p-VyH">
+                                <rect key="frame" x="37" y="634" width="86" height="30"/>
+                                <state key="normal" title="Finalizar"/>
+                                <connections>
+                                    <segue destination="a7f-gw-1Ja" kind="unwind" unwindAction="unwindToThisViewController:" id="1Vh-bx-G1p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="finishTask" destination="T3s-4p-VyH" id="aOb-67-m0U"/>
                         <outlet property="labelInfo" destination="V4L-4a-rI3" id="8mx-W4-6gX"/>
                         <outlet property="labelInfoA" destination="agA-gq-Ppj" id="s2V-eT-Eq0"/>
                         <outlet property="labelInfoP" destination="6gT-D3-UFV" id="hoD-r0-pH5"/>
@@ -612,6 +623,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hxw-ve-UR8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="a7f-gw-1Ja" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-50" y="1591"/>
         </scene>

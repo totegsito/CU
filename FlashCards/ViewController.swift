@@ -10,29 +10,42 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var MyCards: UIButton!
     var values = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        // Descomentando la linea siguiente se vacian las tarjetas propias del usuario.
+        values.setObject(nil, forKey: "MisTarjetas")
         if (values.objectForKey("Comida") == nil){
             loadUsersDefault()
             
         }
+        if(values.objectForKey("MisTarjetas") == nil){
+            MyCards.enabled = false
+        }
+
+        
         
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func unwindToThisViewController (segue: UIStoryboardSegue) {
+        print("Aquí estoy")
+        MyCards.enabled = true
+    
+    }
+    
     
     func loadUsersDefault(){
         
         var Comida = [[String:String]]()
-        
         
         Comida.append(["word": "Wurst", "article": "die", "translation": "Salchicha"])
         Comida.append(["word": "Frühstück", "article": "das", "translation": "Desayuno"])
@@ -414,8 +427,8 @@ class ViewController: UIViewController {
         Deportes.append(["word": "Klettern", "article": "das", "translation": "Escalada"])
 
         values.setValue(Deportes, forKey: "Deportes")
-        
-        
+        print("He entrado")
+        values.setValue([[String : String]](), forKey: "MisTarjetas")
     }
    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -427,6 +440,10 @@ class ViewController: UIViewController {
         }else if segue.identifier == "A2"{
             if segue.destinationViewController.view != nil {
                 (segue.destinationViewController as! A2Controller).TemaLB.text = segue.identifier
+            }
+        }else if segue.identifier == "MisTarjetas"{
+            if segue.destinationViewController.view != nil {
+                (segue.destinationViewController as! QuestionsController).Level.text = segue.identifier
             }
         }
     }

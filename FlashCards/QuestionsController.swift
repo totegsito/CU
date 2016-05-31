@@ -95,6 +95,7 @@ class QuestionsController: UIViewController {
         
         
         values = NSUserDefaults.standardUserDefaults().objectForKey(actual) as! [[String:String]]
+        print(values)
         
         TranslationLB.text = values[cont]["translation"]!
         WordLB.text = values[cont]["word"]!
