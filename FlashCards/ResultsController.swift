@@ -43,7 +43,7 @@ class ResultsController: UIViewController, UITableViewDataSource, UITableViewDel
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath)
         
         let row = indexPath.row
-        cell.textLabel?.text = answers[row] + " " + values[row]["word"]!
+        cell.textLabel?.text = (answers[row] == values[row]["article"] ? "V " : "X ") + answers[row] + " " + values[row]["word"]!
         cell.textLabel?.textColor = answers[row] == values[row]["article"] ? UIColor.greenColor() : UIColor.redColor()
         
         return cell
